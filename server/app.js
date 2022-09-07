@@ -36,6 +36,11 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 
+app.get('/test', (req, res) => {
+  console.log(req.body);
+  res.json('ok');
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
 });
