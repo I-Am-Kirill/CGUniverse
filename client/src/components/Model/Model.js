@@ -6,8 +6,8 @@ import { useFrame } from '@react-three/fiber';
 
 export default function Model(props) {
   const group = useRef();
-  useFrame(() => { group.current.rotation.y += 0.001; }, []);
-  const { nodes, materials } = useGLTF('/scene.gltf');
+  useFrame(() => { group.current.rotation.z += 0.003; }, []);
+  const { nodes, materials } = useGLTF('/CGUniverse_pack_1/wow_axe/wow_axe.gltf');
   //   console.log(useGLTF('/genshin_light_Separate.gltf').meshes);
   console.log('NODES', nodes);
   // console.log('MATERIAL', (materials));
@@ -51,4 +51,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload('/scene.gltf');
+useGLTF.preload('CGUniverse_pack_1/wow_axe/wow_axe.gltf');

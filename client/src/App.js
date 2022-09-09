@@ -1,7 +1,7 @@
 // import { useEffect } from 'react';
 // import { Route, Routes } from 'react-router-dom';
-import Scene from './components/Scene/Scene';
 import { Children, useState } from 'react';
+import Scene from './components/Scene/Scene';
 import './App.css';
 import BasketShop from './components/BasketShop/BasketShop';
 import Modal from './components/Modal/Modal';
@@ -13,7 +13,6 @@ import Page from './components/Page/Page';
 
 
 function App() {
-
   const [modalActive, setModalActive] = useState(false);
   // useEffect(() => {
   //   fetch('http://localhost:3006/test')
@@ -25,15 +24,14 @@ function App() {
       {/* <Routes>
         <Route path="/" element={<Scene />} />
       </Routes> */}
-      <Scene />
-
+      {/*
       <button className="open-btn" onClick={() => setModalActive(true)} type="button">open</button>
       <Modal
         active={modalActive}
         setActive={setModalActive}
       >
         <BasketShop />
-      </Modal>
+      </Modal> */}
 
       <Header />
       <Routes>
