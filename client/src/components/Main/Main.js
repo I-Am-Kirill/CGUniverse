@@ -1,33 +1,15 @@
-import React from 'react';
+
+import React from 'react'
+import AboutUs from '../AboutUs/AboutUs'
+import Favourite from '../Favourite/Favourite'
+import HeaaderModel from '../HeaaderModel/HeaaderModel'
 
 export default function Main() {
   return (
-    <dov>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-      <div>Main</div>
-    </dov>
-
-  );
+    <>
+    <HeaaderModel></HeaaderModel>
+    <AboutUs></AboutUs>
+    <Favourite></Favourite>
+    </>
+  )
 }

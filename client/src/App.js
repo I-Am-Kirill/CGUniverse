@@ -3,6 +3,11 @@ import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 
+import Main from './components/Main/Main';
+
+import Page from './components/Page/Page';
+
+
 function App() {
   useEffect(() => {
     fetch('http://localhost:3006/test')
@@ -12,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Main></Main>
+      <Page />
     </div>
   );
 }
