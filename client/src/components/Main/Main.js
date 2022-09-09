@@ -1,7 +1,14 @@
 import React from 'react'
+import AboutUs from '../AboutUs/AboutUs'
+import Favourite from '../Favourite/Favourite'
+import HeaaderModel from '../HeaaderModel/HeaaderModel'
 
 export default function Main() {
   return (
-    <div>Main</div>
+    <>
+    <HeaaderModel></HeaaderModel>
+    <AboutUs></AboutUs>
+    <Favourite></Favourite>
+    </>
   )
 }

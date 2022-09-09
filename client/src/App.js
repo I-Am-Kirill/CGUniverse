@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import Main from './components/Main/Main';
 
 function App() {
   useEffect(() => {
@@ -9,7 +10,7 @@ function App() {
   });
   return (
     <div className="App">
-      App
+      <Main></Main>
     </div>
   );
 }
