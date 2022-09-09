@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
-
-import Main from './components/Main/Main';
-
 import Page from './components/Page/Page';
 
 
@@ -17,8 +15,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main></Main>
-      <Page />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/page" element={<Page />} />
+      </Routes>
     </div>
   );
 }
