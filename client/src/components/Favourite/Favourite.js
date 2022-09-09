@@ -1,12 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Favourite.css';
 
 export default function Favourite() {
+  const [isPauzet, setIsPauzet] = useState(false);
   return (
-    <div className="Favourite-container111">
-      <div className="Favourite-card">
-        <img className="Favourite-card-img" src="/add-people.jpeg" />
-        <h1 className="Favourite-card-title">Объединяйтесь и создавайте 3D модели вместе</h1>
+    <div className="favourite-back">
+      <h1 className="Favourite-title">Наши рекомендации:</h1>
+      <div className="Favourite-container" onMouseEnter={() => (setIsPauzet(true))} onMouseLeave={() => (setIsPauzet(false))}>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
+        <div className={`Favourite-card ${isPauzet && 'paused'}`}>
+          <img className="Favourite-card-img" src="/car-lada.png" />
+          <h1>Жига</h1>
+        </div>
       </div>
     </div>
   );
