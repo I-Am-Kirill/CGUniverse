@@ -1,0 +1,37 @@
+@keyframes move_bg {
+    from {
+        background-position: 0 0;
+        right: -500px;
+    }
+    to {
+        background-position: 100px 0;
+        right: 500px;
+    }
+  }
+
+.Favourite-container111 {
+    overflow: hidden;
+    background-color: rgba(255, 209, 209, 0.585);
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: nowrap;
+}
+
+/* .AboutUs-card {
+    animation: move_bg 5s linear infinite alternate;
+} */
+
+.container {
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.Favourite-card {
+    position: relative;
+    animation: move_bg 50s linear infinite alternate;
+}
+
+.Favourite-card:hover {
+  
+}

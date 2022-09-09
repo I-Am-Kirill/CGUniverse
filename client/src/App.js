@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import './App.css';
+
+import Main from './components/Main/Main';
+
 import Page from './components/Page/Page';
 
 
@@ -11,6 +14,9 @@ function App() {
   });
   return (
     <div className="App">
+
+      <Main></Main>
+
       <Page />
     </div>
   );
