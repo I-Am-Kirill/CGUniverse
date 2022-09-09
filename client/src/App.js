@@ -1,8 +1,8 @@
 // import { useEffect } from 'react';
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Scene from './components/Scene/Scene';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
 import BasketShop from './components/BasketShop/BasketShop';
 import Modal from './components/Modal/Modal';
 import Header from './components/Header/Header';
@@ -12,7 +12,7 @@ import Page from './components/Page/Page';
 
 
 function App() {
-  const [modalActive, setModalActive] = useState(false);
+  const [modalActive, setModalActive] = useState(true);
   return (
     <div className="App">
       {/* <Routes>
@@ -23,7 +23,7 @@ function App() {
         setActive={setModalActive}
       >
         <BasketShop />
-      </Modal> */}
+      </Modal>
 
       <Header setModalActive={setModalActive} />
       <Routes>

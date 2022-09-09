@@ -1,3 +1,35 @@
 .App {
     text-align: center;
 }
+
+/* scrol */
+:root {
+    --scrollbarBg: rgba(2, 142, 74, 1);
+    --scrollbarThumb: rgba(255, 255, 255, 0.8);
+    --scrollbarWidth: 18px;
+    --scrollbarBorder: 30px solid var(--scrollbarBg);
+    --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 8);
+  }
+  .container {
+    scrollbar-width: var(--scrollbarWidth);
+    scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
+  }
+  .container::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+  }
+  .container::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+    background: var(--scrollbarBgColor);
+    border-radius: var(--scrollbarBorderRadius);
+  }
+  .container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+    background-color: var(--scrollbarThumbColor);
+    border-radius: var(--scrollbarBorderRadius);
+    border: var(--scrollbarBorder);
+    background-image: linear-gradient(
+      180deg,
+      var(--scrollbarThumbColor) 0%,
+      var(--scrollbarThumbColorSecond) 90%
+    );
+  }
