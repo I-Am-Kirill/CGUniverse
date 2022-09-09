@@ -1,4 +1,6 @@
+
 import { useState } from 'react';
+import Scene from './components/Scene/Scene';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import BasketShop from './components/BasketShop/BasketShop';
@@ -10,9 +12,14 @@ import Page from './components/Page/Page';
 
 
 function App() {
+
   const [modalActive, setModalActive] = useState(false);
   return (
     <div className="App">
+      {/* <Routes>
+        <Route path="/" element={<Scene />} />
+      </Routes> */}
+      <Scene />
 
       <Modal
         active={modalActive}
