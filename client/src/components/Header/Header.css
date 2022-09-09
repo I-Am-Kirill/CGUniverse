@@ -14,10 +14,12 @@ a.header-dropdown-item{
 }
 header {
     padding: 0px 50px;
-    position: fixed;
+    position: sticky;
+    top:0px;
     display: flex;
     justify-content: space-around;
-    background: blue
+    /* background: blue; */
+    transition: all 1s;
   }
 
   .header-logo-and-name {
@@ -26,6 +28,8 @@ header {
   .header-container-second {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    align-content : center;
   }
 
   .header-navigation-item-dropdown1 {

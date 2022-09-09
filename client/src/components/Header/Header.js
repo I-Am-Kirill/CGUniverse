@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 
 export default function Header() {
+  const [navSize, setnavSize] = useState('10rem');
+  const [navColor, setnavColor] = useState('transparent');
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setnavColor('#252734') : setnavColor('transparent');
+    window.scrollY > 10 ? setnavSize('5rem') : setnavSize('5rem');
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () => {
+      window.removeEventListener('scroll', listenScrollEvent);
+    };
+  }, []);
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{
+        backgroundColor: navColor,
+        height: navSize,
+        transition: 'all 1s',
+      }}
+    >
       <div className="header-container-first">
         <a className="header-logo-and-name" href="#">
           <img className="header-logo" src="/" alt="logo" />
