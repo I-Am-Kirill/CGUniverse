@@ -8,10 +8,10 @@ import './scene.css';
 export default function Scene() {
   return (
     <Suspense fallback={null}>
-      <Canvas className="can" camera={[20, 50, 50]}>
+      <Canvas className="can" camera={{ position: [80, 60, 60], fov: 40 }}>
 
         <ambientLight intensity={0.1} />
-        <pointLight position={[10, 10, 10]} />
+        <pointLight position={[10, 10, 100]} />
         <Model />
         <OrbitControls />
         {/* <Environment preset="dawn" background /> */}
