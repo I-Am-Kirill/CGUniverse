@@ -40,7 +40,7 @@
   margin: 3px;
 }
 .card-footer-left {
- display: flex;
+  display: flex;
 }
 .card-footer-avatar {
   width: 18px;
@@ -73,6 +73,7 @@
   color: #a7a7a7;
   font-size: 12px;
 }
+
 p{
   padding: 0;
   margin: 0;

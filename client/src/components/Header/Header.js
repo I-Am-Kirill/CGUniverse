@@ -79,9 +79,9 @@ export default function Header({ setModalActive }) {
           {/* <button className="header-form-btn" type="submit">Search</button> */}
         </a>
       </div>
-      <div className="header-container-fourth" onClick={() => setModalActive(true)}>
+      <div className="header-container-fourth">
         <a className="header-right-btn" href="#">
-          <span className="header-right-btn-text">
+          <span className="header-right-btn-text" onClick={() => setModalActive(true)}>
             <img
               className="header-right-button-cart-icon"
               src="shopping-cart-svgrepo-com.svg"

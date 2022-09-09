@@ -19,15 +19,16 @@ export default function HeaaderModel() {
         </div>
         <div className="heaader-model-box-text">
           <p className="heaader-model-text">
-            Управляйте своими 3D-ресурсами. Распространяйте опыт 3D и AR. Сотрудничайте с другими. Продемонстрируйте свою работу.
+            Управляйте своими 3D-ресурсами.
+            Распространяйте опыт 3D и AR. Сотрудничайте с другими. Продемонстрируйте свою работу.
             <br />
             {' '}
             Покупайте и продавайте 3D модели.
           </p>
         </div>
         <div className="heaader-model-btn-container">
-          <button className="btn header-model-btn-reg">ЗАРЕГИСТРИРОВАТЬСЯ</button>
-          <button className="btn header-model-btn-models-list">ПОСМОТРЕТЬ МОДЕЛИ</button>
+          <button className="btn header-model-btn-reg" type="button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+          <button className="btn header-model-btn-models-list" type="button">ПОСМОТРЕТЬ МОДЕЛИ</button>
         </div>
       </div>
       <div className="heaader-model-container-second">
