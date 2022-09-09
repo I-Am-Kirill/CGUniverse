@@ -27,5 +27,6 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 0,
     'default-param-last': 0,
     camelcase: 0,
+    'no-multiple-empty-lines': 0,
   },
 };
