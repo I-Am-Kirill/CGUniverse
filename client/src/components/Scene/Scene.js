@@ -8,7 +8,7 @@ import './scene.css';
 export default function Scene() {
   return (
     <Suspense fallback={null}>
-      <Canvas className="can" camera={{ position: [80, 60, 60], fov: 40 }}>
+      <Canvas className="can" camera={{ position: [80, 60, 60], fov: 1 }}>
 
         <ambientLight intensity={0.1} />
         <pointLight position={[10, 10, 100]} />

@@ -1,4 +1,4 @@
-
+// import { useEffect } from 'react';
 import { useState } from 'react';
 import Scene from './components/Scene/Scene';
 import './App.css';
@@ -12,21 +12,18 @@ import Page from './components/Page/Page';
 
 
 function App() {
-
   const [modalActive, setModalActive] = useState(false);
   return (
     <div className="App">
       {/* <Routes>
         <Route path="/" element={<Scene />} />
       </Routes> */}
-      <Scene />
-
       <Modal
         active={modalActive}
         setActive={setModalActive}
       >
         <BasketShop />
-      </Modal>
+      </Modal> */}
 
       <Header setModalActive={setModalActive} />
       <Routes>
