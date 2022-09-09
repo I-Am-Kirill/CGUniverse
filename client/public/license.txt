@@ -1,0 +1,11 @@
+Model Information:
+* title:	WALL_E
+* source:	https://sketchfab.com/3d-models/wall-e-30c3c1afeb83451e9a8bc233c594af73
+* author:	头戴胖次 (https://sketchfab.com/2251387929a)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "WALL_E" (https://sketchfab.com/3d-models/wall-e-30c3c1afeb83451e9a8bc233c594af73) by 头戴胖次 (https://sketchfab.com/2251387929a) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
