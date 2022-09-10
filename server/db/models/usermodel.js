@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate({
       User, Category, Comment, LikeModel, Favorites,
     }) {
-      this.belongTo(User, { foreignKey: 'user_id' });
-      this.belongTo(Category, { foreignKey: 'categ_id' });
+      this.belongsTo(User, { foreignKey: 'user_id' });
+      this.belongsTo(Category, { foreignKey: 'categ_id' });
       this.hasMany(Comment, { foreignKey: 'model_id' });
       this.hasMany(LikeModel, { foreignKey: 'model_id' });
       this.hasMany(Favorites, { foreignKey: 'model_id' });
