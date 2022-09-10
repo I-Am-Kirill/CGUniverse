@@ -24,8 +24,8 @@ function App() {
       >
         <BasketShop />
       </Modal>
-
       <Header setModalActive={setModalActive} />
+      <Page />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/page" element={<Page />} />

@@ -16,7 +16,11 @@
 }
 .basket-header-dellAll {
   text-decoration: none;
-  color:#4eabd9;
+  color:rgb(75, 75, 75);
+}
+.basket-header-dellAll:hover {
+  cursor: pointer;
+  color:rgb(80, 80, 80)
 }
 
 .basket-button1 {
