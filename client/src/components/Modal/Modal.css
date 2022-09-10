@@ -21,7 +21,7 @@
 .modal-content {
   max-height: calc(100vh - 210px);
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 90vh;
   padding: 15px 15px;
   border-radius: 10px;
   background-color: rgb(254, 254, 254);

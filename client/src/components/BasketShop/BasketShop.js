@@ -12,10 +12,6 @@ export default function BasketShop() {
       <div className="basket-content">
         <Purchased />
         <Purchased />
-        <Purchased />
-        <Purchased />
-        <Purchased />
-        <Purchased />
       </div>
       <div className="basket-button1">
         <a className="basket-button" href="/">
