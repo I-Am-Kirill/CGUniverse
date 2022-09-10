@@ -23,7 +23,7 @@ function App() {
         setActive={setModalActive}
       >
         <BasketShop />
-      </Modal> */}
+      </Modal>
 
       <Header setModalActive={setModalActive} />
       <Routes>
