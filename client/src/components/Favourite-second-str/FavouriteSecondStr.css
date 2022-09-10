@@ -1,0 +1,36 @@
+@keyframes move_bg2 {
+    from {
+        background-position: 0 0;
+        right: 1030px;
+    }
+    to {
+        background-position: 100px 0;
+        right: -1025px;
+    }
+}
+
+.Favourite-second-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 360px;
+    height: 220px ;
+    position: relative;
+    animation: move_bg2 60s linear infinite alternate;
+    margin: 0 10px 40px 10px;
+}
+
+.Favourite-second-container {
+    overflow: hidden;
+    background-color: #e8f7fb;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: nowrap;
+}
+
+.Favourite-second-card:hover {
+    box-shadow: 5px 11px 20px 5px rgba(0, 0, 0, 0.272);
+}
+
+.paused {
+    animation-play-state: paused;
+}

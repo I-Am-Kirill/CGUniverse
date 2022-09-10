@@ -1,16 +1,17 @@
 
-import React from 'react'
-import AboutUs from '../AboutUs/AboutUs'
-import Favourite from '../Favourite/Favourite'
-import HeaaderModel from '../HeaaderModel/HeaaderModel'
-import './Main.css'
+import React from 'react';
+import AboutUs from '../AboutUs/AboutUs';
+import Favourite from '../Favourite/Favourite';
+import HeaaderModel from '../HeaaderModel/HeaaderModel';
+import FavouriteSecondStr from '../Favourite-second-str/FavouriteSecondStr';
 
 export default function Main() {
   return (
-    <div className="main">
-    <HeaaderModel></HeaaderModel>
-    <AboutUs></AboutUs>
-    <Favourite></Favourite>
-    </div>
-  )
+    <>
+      <HeaaderModel />
+      <AboutUs />
+      <Favourite />
+      <FavouriteSecondStr />
+    </>
+  );
 }

@@ -1,0 +1,45 @@
+.basket-container {
+  position: relative;
+}
+.basket-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 10px 0 20px;
+}
+.basket-header-text {
+  color:rgb(75, 75, 75);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+.basket-header-dellAll {
+  text-decoration: none;
+  color:#4eabd9;
+}
+
+.basket-button1 {
+  margin: 25px 0 10px;
+}
+.basket-button{
+  text-decoration: none;
+}
+.basket-button-text {
+  background: #ef9b3a;
+  color: white;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  padding: 10px;
+  border-radius: 6px;
+}
+.basket-button-text:hover {
+background-color: #4eabd900;
+color: white;
+background: #ff7600;
+}
+
+h1,p{
+  padding: 0;
+  margin: 0;
+}

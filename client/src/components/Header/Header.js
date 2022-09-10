@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 
-export default function Header() {
+export default function Header({ setModalActive }) {
   const [navSize, setnavSize] = useState('10rem');
   const [navColor, setnavColor] = useState('transparent');
   const listenScrollEvent = () => {
@@ -81,8 +81,15 @@ export default function Header() {
       </div>
       <div className="header-container-fourth">
         <a className="header-right-btn" href="#">
-          <span className="header-right-btn-text">
-            <img className="header-right-button-cart-icon" src="shopping-cart-svgrepo-com.svg" alt="Cart" width="20px" height="20" />
+          <span className="header-right-btn-text" onClick={() => setModalActive(true)}>
+            <img
+              className="header-right-button-cart-icon"
+              src="shopping-cart-svgrepo-com.svg"
+              alt="Cart"
+              width="20px"
+              height="20"
+              type="button"
+            />
           </span>
         </a>
         <a className="header-btn header-right-btn1" href="#">
