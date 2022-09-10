@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Page from './components/Page/Page';
+import Profile from './components/Profile/Profile';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/page" element={<Page />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );
