@@ -6,10 +6,10 @@ const FileStore = require('session-file-store')(session);
 const path = require('path');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
-const {} = require('./db/models');
+const auth = require('./routes/authRouter/auth');
 
 const app = express();
-const PORT = process.env.PORT ?? 3003;
+const PORT = process.env.PORT ?? 3002;
 
 app.use(cors({
   origin: true,
@@ -20,6 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(process.env.PWD, 'public')));
+
+app.use('/auth', auth);
 
 const sessionConfig = {
   name: 'cgu-cookie',
