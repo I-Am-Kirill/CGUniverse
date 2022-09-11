@@ -4,13 +4,13 @@ const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const path = require('path');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const cors = require('cors');
-const {} = require('./db/models');
-const model = require('./routes/model');
+const auth = require('./routes/api/apiAuth');
+const apiModels = require('./routes/api/apiModels');
 
 const app = express();
-const PORT = process.env.PORT ?? 3003;
+const PORT = process.env.PORT ?? 3002;
 
 app.use(cors({
   origin: true,
@@ -37,12 +37,9 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 
-app.use('/model', model);
-
-app.get('/test', (req, res) => {
-  console.log(req.body);
-  res.json('ok');
-});
+app.use('/api', apiModels);
+app.use('/auth', auth);
+app.use('/api/like', apiModels);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);

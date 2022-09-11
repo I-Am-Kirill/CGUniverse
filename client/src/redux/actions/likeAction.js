@@ -7,7 +7,7 @@ export const getLikes = (data) => ({ type: GET_LIKES, payload: data });
 
 export const deleteLike_THUNK = (id) => (dispatch) => {
   fetch(
-    `http://localhost:3002/like/${id}`,
+    `http://localhost:3002/api/like/like/${id}`,
     {
       method: 'delete',
     },
@@ -19,7 +19,7 @@ export const deleteLike_THUNK = (id) => (dispatch) => {
 };
 
 export const getLike_THUNK = (modelId) => (dispatch) => {
-  fetch(`http://localhost:3002/likes?modelId=${modelId || 0}`)
+  fetch(`http://localhost:3002/api/like/like/?modelId=${modelId || 0}`)
     .then((res) => res.json())
     .then((res) => {
       dispatch(getLikes(res));

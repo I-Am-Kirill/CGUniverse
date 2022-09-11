@@ -13,6 +13,9 @@ module.exports = {
       path: {
         type: Sequelize.TEXT,
       },
+      pic: {
+        type: Sequelize.TEXT,
+      },
       user_id: {
         type: Sequelize.INTEGER,
         references: {
