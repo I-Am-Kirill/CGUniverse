@@ -7,6 +7,7 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const {} = require('./db/models');
+const apiModels = require('./routes/api/apiModels');
 
 const app = express();
 const PORT = process.env.PORT ?? 3003;
@@ -36,10 +37,7 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 
-app.get('/test', (req, res) => {
-  console.log(req.body);
-  res.json('ok');
-});
+app.use('/api/', apiModels);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
