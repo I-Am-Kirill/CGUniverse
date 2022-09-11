@@ -14,6 +14,9 @@
   font-weight: 400;
   text-align: left;
 }
+.basket-close:hover{
+  cursor: pointer;
+}
 .basket-header-dellAll {
   text-decoration: none;
   color:rgb(75, 75, 75);

@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Page from './components/Page/Page';
 import Profile from './components/Profile/Profile';
+import Favourite from './components/Favourite/Favourite';
 
 
 
@@ -26,7 +27,6 @@ function App() {
         <BasketShop />
       </Modal>
       <Header setModalActive={setModalActive} />
-      <Page />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/page" element={<Page />} />
