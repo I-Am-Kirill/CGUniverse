@@ -9,7 +9,7 @@ export default function Page() {
         className="model-img"
         src="https://www.rabstol.net/uploads/gallery/main/640/rabstol_net_cowboy_bebop_01.jpg"
         alt="img"
-        onClick={()=> (console.log('model`s modal'))}
+        onClick={() => (console.log('model`s modal'))}
       />
       <div className="card-footer">
         <div className="card-footer-left" onClick={() => (console.log('author`s profile'))}>
