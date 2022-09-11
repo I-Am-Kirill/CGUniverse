@@ -1,17 +1,17 @@
 /* eslint-disable react/no-unknown-property */
-import React, { Suspense, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Environment, OrbitControls } from '@react-three/drei';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import Model from '../Model/Model';
 import './scene.css';
 
 export default function Scene() {
   return (
     <Suspense fallback={null}>
-      <Canvas className="can" camera={{ position: [80, 60, 60], fov: 1 }}>
+      <Canvas className="can" camera={{ position: [0.5, 1, 1], fov: 30 }}>
 
-        <ambientLight intensity={0.1} />
-        <pointLight position={[10, 10, 100]} />
+        <ambientLight intensity={0.2} />
+        <pointLight position={[10, 0, 10]} />
         <Model />
         <OrbitControls />
         {/* <Environment preset="dawn" background /> */}
