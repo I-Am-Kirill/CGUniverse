@@ -1,7 +1,28 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Profile.css';
+import { useDispatch, useSelector } from 'react-redux';
+import UserModels from '../UserModels/UserModels';
+import { getModels_THUNK } from '../../redux/actions/modelAction';
+import { getLike_THUNK } from '../../redux/actions/likeAction';
 
-export default function Profile() {
+export default function ProfileLike() {
+  const dispatch = useDispatch();
+  const { model } = useSelector((state) => state);
+
+  // добавить в танк из useSelector auth
+  useEffect(() => {
+    dispatch(getModels_THUNK());
+  }, []);
+
+  const { like } = useSelector((state) => state);
+
+  // добавить в танк из useSelector auth
+  useEffect(() => {
+    dispatch(getLike_THUNK());
+  }, []);
+
   return (
     <div className="profile-general-container">
       <div className="profile-first-container">
@@ -20,16 +41,19 @@ export default function Profile() {
         </div>
         <div className="profile-5-btn">
           <ul className="profile-5-btn-ul">
-            <li className="profile-one-btn">
+            {/* <li className="profile-one-btn">
               <a className="profile-third-btn-a" href="#">
                 SUMMARY
               </a>
-            </li>
+            </li> */}
             <li className="profile-one-btn">
-              <a className="profile-second-btn-a" href="#">
-                <span className="profile-second-btn-span">0 </span>
+              <Link to="/profile" className="profile-second-btn-a" href="#">
+                <span className="profile-second-btn-span">
+                  {`${model.length}`}
+                  {' '}
+                </span>
                 Models
-              </a>
+              </Link>
             </li>
             {/* <li className="profile-one-btn">
               <a className="profile-third-btn-a" href="#">Collection</a>
@@ -49,13 +73,17 @@ export default function Profile() {
               </ul>
             </li> */}
             <li className="profile-one-btn">
-              <a className="profile-forth-btn-a" href="#">
-                <span className="header-forth-btn-span">1 </span>
+              <Link to="/profileLike" className="profile-forth-btn-a">
+                <span className="header-forth-btn-span">
+                  {' '}
+                  {`${like.length}`}
+                  {' '}
+                </span>
                 Like
-              </a>
+              </Link>
             </li>
             <li className="profile-one-btn">
-              <a className="profile-fifth-btn-a" href="#">Uploads</a>
+              <Link className="profile-fifth-btn-a" to="/upload">Uploads</Link>
             </li>
           </ul>
         </div>
@@ -76,8 +104,14 @@ export default function Profile() {
               </a>
             </h2> */}
           </div>
-          <div className="profile-two-sides-left-results">
-            No results
+          <div>
+            {(like.length !== 0) ? (
+              <div className="profile-two-sides-left-results-grid">
+                {like?.map((el) => (<UserModels key={el.id} el={el} />))}
+              </div>
+            ) : (
+              <span className="profile-two-sides-left-results"> No results </span>
+            ) }
           </div>
         </div>
         <div className="profile-two-sides-right">
@@ -86,16 +120,24 @@ export default function Profile() {
             <a className="profile-two-sides-first-tabel-links">
               Edit your biography
             </a>
-            <h3 className="profile-two-sides-first-tabel-title"> CATEGORY</h3>
-            <p className="profile-two-sides-first-tabel-p">Individual / Other</p>
-            <h3 className="profile-two-sides-first-tabel-title"> WEBSITE</h3>
+            {/* <h3 className="profile-two-sides-first-tabel-title"> CATEGORY</h3>
+            <p className="profile-two-sides-first-tabel-p">Individual / Other</p> */}
+            {/* <h3 className="profile-two-sides-first-tabel-title"> WEBSITE</h3>
             <a className="profile-two-sides-first-tabel-links">
               Add a link
-            </a>
+            </a> */}
             <h3 className="profile-two-sides-first-tabel-title"> MEMBER SINCE</h3>
             <p className="profile-two-sides-first-tabel-p">DATA</p>
+            {/* <h3 className="profile-two-sides-first-tabel-title"> STATS</h3>
+            <div className="profile-two-sides-right-table-vltv">
+              <img className="profile-two-sides-right-table-icons" src="" alt="icon" />
+              <p className="profile-two-sides-right-table-title">
+                <span className="profile-two-sides-right-second-table-number"> 0 </span>
+                likes
+              </p>
+            </div> */}
           </div>
-          <div className="profile-two-sides-right-table">
+          {/* <div className="profile-two-sides-right-table">
             <h3 className="profile-two-sides-first-tabel-title"> STATS</h3>
             <div className="profile-two-sides-right-table-vltv">
               <img className="profile-two-sides-right-table-icons" src="" alt="icon" />
@@ -125,7 +167,7 @@ export default function Profile() {
                 vertices
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div className="profile-two-sides-right-table">
             <h3 className="profile-two-sides-first-tabel-title"> STATS</h3>
             <a className="profile-two-sides-first-tabel-links">

@@ -10,10 +10,8 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Page from './components/Page/Page';
 import Profile from './components/Profile/Profile';
-
-
+import ProfileLike from './components/ProfileLike/ProfileLike';
 import Favourite from './components/Favourite/Favourite';
-
 import { setAuth } from './redux/actions/authActions';
 import Registration from './components/Registration/Registration';
 import Login from './components/Login/Login';
@@ -66,6 +64,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/page" element={<Page />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/profileLike" element={<ProfileLike />} />
       </Routes>
 
     </div>

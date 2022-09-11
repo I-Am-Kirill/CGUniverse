@@ -1,5 +1,5 @@
 const express = require('express');
-const { UserModel } = require('../../db/models/usermodel');
+const { UserModel } = require('../../db/models');
 
 const route = express.Router();
 
@@ -12,7 +12,7 @@ route.get('/models/:modelId', async (req, res) => {
 route.get('/models', async (req, res) => {
   const { userid } = req.query;
   const result = await UserModel.findAll({
-    where: !+userid ? {} : { user_id: +userid }, limit: 100,
+    where: !+userid ? {} : { user_id: +userid }, limit: 100, attributes: ['id', 'name', 'path', 'user_id', 'categ_id', 'price'],
   });
   res.json(result);
 });
