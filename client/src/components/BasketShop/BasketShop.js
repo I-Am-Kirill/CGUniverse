@@ -7,13 +7,11 @@ export default function BasketShop() {
     <div className="basket-container">
       <div className="basket-header">
         <h1 className="basket-header-text">Корзина</h1>
-        <a className="basket-header-dellAll" href="/">очистить список</a>
+        <div className="basket-close">
+          <a className="basket-header-dellAll" href="/">Х</a>
+        </div>
       </div>
       <div className="basket-content">
-        <Purchased />
-        <Purchased />
-        <Purchased />
-        <Purchased />
         <Purchased />
         <Purchased />
       </div>

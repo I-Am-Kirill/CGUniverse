@@ -10,14 +10,19 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Page from './components/Page/Page';
 import Profile from './components/Profile/Profile';
+
+import Favourite from './components/Favourite/Favourite';
+
 import { setAuth } from './redux/actions/authActions';
 import Registration from './components/Registration/Registration';
 import Login from './components/Login/Login';
 
 
 
+
 function App() {
   const [modalActive, setModalActive] = useState(false);
+
   const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
   const [wind, setwind] = useState('');
@@ -31,6 +36,7 @@ function App() {
         dispatch(setAuth(res));
       });
   }, []);
+
 
   return (
     <div className="App">

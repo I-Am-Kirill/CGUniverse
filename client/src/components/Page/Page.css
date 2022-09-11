@@ -2,10 +2,15 @@
   background-color: #f2f2f2;
   height: 100vh;
 }
-.content-text {
-  color: #222;
+.content-header {
+  margin-bottom: 20px;
+}
+.content-header-text {
+  color:rgb(75, 75, 75);
+  border-bottom: 1px solid #E1E8EE;
+  padding: 0 0 20px;
   margin: 10px 0;
-  font-weight: 300;
+  font-weight: 400;
   text-align: left;
 }
 .content {
