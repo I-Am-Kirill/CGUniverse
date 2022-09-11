@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
-import './Profile.css';
 import { Link } from 'react-router-dom';
+import './Profile.css';
 import { useDispatch, useSelector } from 'react-redux';
 import UserModels from '../UserModels/UserModels';
 import { getModels_THUNK } from '../../redux/actions/modelAction';
@@ -83,7 +83,7 @@ export default function ProfileLike() {
               </Link>
             </li>
             <li className="profile-one-btn">
-              <a className="profile-fifth-btn-a" href="#">Uploads</a>
+              <Link className="profile-fifth-btn-a" to="/upload">Uploads</Link>
             </li>
           </ul>
         </div>

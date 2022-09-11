@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 // import { useEffect } from 'react';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -10,18 +11,23 @@ import Main from './components/Main/Main';
 import Page from './components/Page/Page';
 import Profile from './components/Profile/Profile';
 import ProfileLike from './components/ProfileLike/ProfileLike';
+import Favourite from './components/Favourite/Favourite';
 import { setAuth } from './redux/actions/authActions';
 import Registration from './components/Registration/Registration';
+import Login from './components/Login/Login';
+
 
 
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
+
   const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
+  const [wind, setwind] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3002/auth/', {
+    fetch('http://localhost:3002/auth/auth', {
       credentials: 'include',
     })
       .then((res) => res.json())
@@ -29,6 +35,7 @@ function App() {
         dispatch(setAuth(res));
       });
   }, []);
+
   return (
     <div className="App">
       {/* <Routes>
@@ -38,11 +45,21 @@ function App() {
         active={modalActive}
         setActive={setModalActive}
       >
-        {/* <BasketShop /> */}
-        <Registration />
+        {wind === 'log'
+          ? (
+            <Login />
+          ) : wind === 'reg'
+            ? (
+              <Registration />
+            ) : wind === 'basket'
+              ? (
+                <BasketShop />
+              ) : (
+                <p />
+              )}
       </Modal>
 
-      <Header setModalActive={setModalActive} />
+      <Header setModalActive={setModalActive} setwind={setwind} />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/page" element={<Page />} />

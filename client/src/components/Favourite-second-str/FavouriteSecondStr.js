@@ -20,7 +20,7 @@ export default function FavouriteSecondStr() {
         <h1>Пушка</h1>
       </div>
       <div className={`Favourite-second-card ${isPauzet && 'paused'}`}>
-        <img className="Favourite-card-img" src="/car-lada.png" />
+        <img className="Favourite-card-img" src="http://localhost:3002/img_models/bomb_pic.png" />
         <h1>Пушка</h1>
       </div>
       <div className={`Favourite-second-card ${isPauzet && 'paused'}`}>

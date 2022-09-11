@@ -83,7 +83,7 @@ export default function Profile() {
               </Link>
             </li>
             <li className="profile-one-btn">
-              <a className="profile-fifth-btn-a" href="#">Uploads</a>
+              <a className="profile-fifth-btn-a" href="/upload">Uploads</a>
             </li>
           </ul>
         </div>
@@ -117,7 +117,7 @@ export default function Profile() {
         <div className="profile-two-sides-right">
           <div className="profile-two-sides-right-table">
             <h3 className="profile-two-sides-first-tabel-title"> ABOUT</h3>
-            <a className="profile-two-sides-first-tabel-links">
+            <a className="profile-two-sides-first-tabel-links" href="#">
               Edit your biography
             </a>
             {/* <h3 className="profile-two-sides-first-tabel-title"> CATEGORY</h3>

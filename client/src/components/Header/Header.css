@@ -168,3 +168,7 @@ header {
   background: #ff7600;
   color: white;
 }
+
+.heade-btn-logout {
+  width: 100px;
+}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setAuth } from '../../redux/actions/authActions';
+import './Registration.css';
 
 export default function Registration() {
   const dispatch = useDispatch();
@@ -11,10 +12,8 @@ export default function Registration() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (data?.name !== '') {
-      if ((data?.password === data?.dublPassword) && (data?.password !== '')) {
-        setPass(false);
-      }
+    if ((data?.password === data?.dublPassword) && (data?.password !== '')) {
+      setPass(false);
     } else {
       setPass(true);
     }
@@ -43,8 +42,12 @@ export default function Registration() {
 
   return (
     <>
-      <div>Регистрация</div>
-      <section>
+      <div>
+        <h1 className="form-title">
+          Регистрация
+        </h1>
+      </div>
+      <section className="form-section">
         <form className="form" method="post" onSubmit={submitHandler}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">Имя</label>
@@ -62,7 +65,7 @@ export default function Registration() {
             <label htmlFor="dublPassword" className="form-label">Повторите пароль</label>
             <input type="password" className="form-control" name="dublPassword" onChange={inputHandler} value={data?.dublPassword || ''} />
           </div>
-          <button onChange={inputHandler} disabled={pass} type="submit" className="btn btn-registration">Зарегистрироваться</button>
+          <button disabled={pass} type="submit" className="btn btn-registration">Зарегистрироваться</button>
         </form>
       </section>
     </>
