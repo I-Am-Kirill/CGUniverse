@@ -11,6 +11,7 @@ import Main from './components/Main/Main';
 import Page from './components/Page/Page';
 import Profile from './components/Profile/Profile';
 
+
 import Favourite from './components/Favourite/Favourite';
 
 import { setAuth } from './redux/actions/authActions';
@@ -36,7 +37,6 @@ function App() {
         dispatch(setAuth(res));
       });
   }, []);
-
 
   return (
     <div className="App">
