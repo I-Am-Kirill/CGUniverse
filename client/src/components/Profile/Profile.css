@@ -166,11 +166,19 @@ color: #4cc8f1;
     color:#ccc;
  }
 
+ .profile-two-sides-left-results-grid{
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns:  repeat(auto-fit, minmax(100px, 1fr));
+ }
+
 .profile-two-sides-right-table{
     background-color: #ffffff;
     width: 100%;
     margin-bottom: 30px;
     padding: 0.7em;
+    text-align: left;
  }
 
  .profile-two-sides-right{

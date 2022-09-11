@@ -1,7 +1,21 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
+import UserModels from '../UserModels/UserModels';
 
 export default function Profile() {
+  const [userModels, setUserModels] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:3002/model/${1}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setUserModels(data);
+      });
+  }, []);
+
+  console.log(userModels, 'userModels=============');
+
   return (
     <div className="profile-general-container">
       <div className="profile-first-container">
@@ -20,14 +34,17 @@ export default function Profile() {
         </div>
         <div className="profile-5-btn">
           <ul className="profile-5-btn-ul">
-            <li className="profile-one-btn">
+            {/* <li className="profile-one-btn">
               <a className="profile-third-btn-a" href="#">
                 SUMMARY
               </a>
-            </li>
+            </li> */}
             <li className="profile-one-btn">
               <a className="profile-second-btn-a" href="#">
-                <span className="profile-second-btn-span">0 </span>
+                <span className="profile-second-btn-span">
+                  {`${userModels.length}`}
+                  {' '}
+                </span>
                 Models
               </a>
             </li>
@@ -76,8 +93,14 @@ export default function Profile() {
               </a>
             </h2> */}
           </div>
-          <div className="profile-two-sides-left-results">
-            No results
+          <div>
+            {(userModels.length !== 0) ? (
+              <div className="profile-two-sides-left-results-grid">
+                {userModels?.map((el) => (<UserModels key={el.id} el={el} />))}
+              </div>
+            ) : (
+              <span className="profile-two-sides-left-results"> No results </span>
+            ) }
           </div>
         </div>
         <div className="profile-two-sides-right">
@@ -86,16 +109,24 @@ export default function Profile() {
             <a className="profile-two-sides-first-tabel-links">
               Edit your biography
             </a>
-            <h3 className="profile-two-sides-first-tabel-title"> CATEGORY</h3>
-            <p className="profile-two-sides-first-tabel-p">Individual / Other</p>
-            <h3 className="profile-two-sides-first-tabel-title"> WEBSITE</h3>
+            {/* <h3 className="profile-two-sides-first-tabel-title"> CATEGORY</h3>
+            <p className="profile-two-sides-first-tabel-p">Individual / Other</p> */}
+            {/* <h3 className="profile-two-sides-first-tabel-title"> WEBSITE</h3>
             <a className="profile-two-sides-first-tabel-links">
               Add a link
-            </a>
+            </a> */}
             <h3 className="profile-two-sides-first-tabel-title"> MEMBER SINCE</h3>
             <p className="profile-two-sides-first-tabel-p">DATA</p>
+            <h3 className="profile-two-sides-first-tabel-title"> STATS</h3>
+            <div className="profile-two-sides-right-table-vltv">
+              <img className="profile-two-sides-right-table-icons" src="" alt="icon" />
+              <p className="profile-two-sides-right-table-title">
+                <span className="profile-two-sides-right-second-table-number"> 0 </span>
+                likes
+              </p>
+            </div>
           </div>
-          <div className="profile-two-sides-right-table">
+          {/* <div className="profile-two-sides-right-table">
             <h3 className="profile-two-sides-first-tabel-title"> STATS</h3>
             <div className="profile-two-sides-right-table-vltv">
               <img className="profile-two-sides-right-table-icons" src="" alt="icon" />
@@ -125,7 +156,7 @@ export default function Profile() {
                 vertices
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div className="profile-two-sides-right-table">
             <h3 className="profile-two-sides-first-tabel-title"> STATS</h3>
             <a className="profile-two-sides-first-tabel-links">

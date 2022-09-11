@@ -7,6 +7,7 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const {} = require('./db/models');
+const model = require('./routes/model');
 
 const app = express();
 const PORT = process.env.PORT ?? 3003;
@@ -35,6 +36,8 @@ const sessionConfig = {
 };
 
 app.use(session(sessionConfig));
+
+app.use('/model', model);
 
 app.get('/test', (req, res) => {
   console.log(req.body);
