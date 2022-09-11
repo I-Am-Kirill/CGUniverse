@@ -31,7 +31,7 @@ export default function HeaaderModel() {
           <button className="btn header-model-btn-models-list" type="button">ПОСМОТРЕТЬ МОДЕЛИ</button>
         </div>
       </div>
-      <div className="heaader-model-container-second">
+      <div id="canvas" className="heaader-model-container-second">
         <Scene className="heaader-model-canvas" width="800" height="650" />
         {/* <canvas className='heaader-model-canvas' width='800' height='650'></canvas> */}
       </div>

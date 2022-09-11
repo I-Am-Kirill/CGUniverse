@@ -1,7 +1,6 @@
 // import { useEffect } from 'react';
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Scene from './components/Scene/Scene';
 import './App.css';
 import BasketShop from './components/BasketShop/BasketShop';
 import Modal from './components/Modal/Modal';
@@ -13,7 +12,7 @@ import Profile from './components/Profile/Profile';
 
 
 function App() {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
   return (
     <div className="App">
       {/* <Routes>
