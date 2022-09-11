@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './Profile.css';
 
@@ -55,7 +56,7 @@ export default function Profile() {
               </a>
             </li>
             <li className="profile-one-btn">
-              <a className="profile-fifth-btn-a" href="#">Uploads</a>
+              <a className="profile-fifth-btn-a" href="/upload">Uploads</a>
             </li>
           </ul>
         </div>

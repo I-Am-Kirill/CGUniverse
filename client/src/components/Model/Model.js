@@ -7,23 +7,19 @@ import { useFrame } from '@react-three/fiber';
 export default function Model(props) {
   const group = useRef();
   useFrame(() => { group.current.rotation.z += 0.003; }, []);
-  const { nodes, materials } = useGLTF('http://localhost:3002/models/wow_axe.glb');
-  //   console.log(useGLTF('/genshin_light_Separate.gltf').meshes);
-  console.log('NODES', nodes);
+  const { nodes, materials } = useGLTF('http://localhost:3002/models/final_fantasy_sword.glb');
+  // console.log('NODES', nodes);
   // console.log('MATERIAL', (materials));
   const keyArr = Object.keys(nodes);
   // console.log(keyArr);
   const meshArr = [];
   for (let i = 0; i < keyArr.length; i += 1) {
-    // console.log(nodes[keyArr[i]]);
     if (nodes[keyArr[i]].type === 'Mesh') {
       meshArr.push(nodes[keyArr[i]]);
     }
   }
   const materialKeys = Object.keys(materials);
-  console.log(materialKeys);
-  // console.log(meshArr);
-  //   meshArr.map((el) => console.log(el));
+
   return (
     <group ref={group} {...props} dispose={null} scale={0.4}>
       {meshArr.map((mesh) => (
@@ -35,20 +31,8 @@ export default function Model(props) {
           material={materials[materialKeys]}
         />
       ))}
-      {/* <mesh
-        castShadow
-        receiveShadow
-        geometry={meshArr[2].geometry}
-        // material={materials['Material.001']}
-      /> */}
-      {/* <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Curve007_2.geometry}
-        material={materials['Material.002']}
-      /> */}
     </group>
   );
 }
 
-useGLTF.preload('http://localhost:3002/models/wow_axe.glb');
+useGLTF.preload('http://localhost:3002/models/final_fantasy_sword.glb');

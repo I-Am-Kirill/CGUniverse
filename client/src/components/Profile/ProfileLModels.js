@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Profile.css';
 
 export default function Profile() {
@@ -55,7 +56,7 @@ export default function Profile() {
               </a>
             </li>
             <li className="profile-one-btn">
-              <a className="profile-fifth-btn-a" href="#">Uploads</a>
+              <Link className="profile-fifth-btn-a" to="/upload">Uploads</Link>
             </li>
           </ul>
         </div>
