@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   UserModel.init({
     name: DataTypes.STRING,
     path: DataTypes.TEXT,
+    pic: DataTypes.TEXT,
     user_id: DataTypes.INTEGER,
     categ_id: DataTypes.INTEGER,
     price: DataTypes.INTEGER,
