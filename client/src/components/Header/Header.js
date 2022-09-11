@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Header.css';
 
 export default function Header({ setModalActive }) {
-  const [navSize, setnavSize] = useState('10rem');
+  const [navSize, setnavSize] = useState('5rem');
   const [navColor, setnavColor] = useState('transparent');
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor('#252734') : setnavColor('transparent');

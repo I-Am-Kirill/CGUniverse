@@ -4,9 +4,10 @@ const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const path = require('path');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const cors = require('cors');
-const auth = require('./routes/authRouter/auth');
+const auth = require('./routes/api/apiAuth');
+const apiModels = require('./routes/api/apiModels');
 
 const app = express();
 const PORT = process.env.PORT ?? 3002;
@@ -21,7 +22,6 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(process.env.PWD, 'public')));
 
-app.use('/auth', auth);
 
 const sessionConfig = {
   name: 'cgu-cookie',
@@ -38,10 +38,8 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 
-app.get('/test', (req, res) => {
-  console.log(req.body);
-  res.json('ok');
-});
+app.use('/api/', apiModels);
+app.use('/auth', auth);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);

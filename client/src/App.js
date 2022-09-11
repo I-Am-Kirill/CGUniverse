@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Scene from './components/Scene/Scene';
 import './App.css';
 import BasketShop from './components/BasketShop/BasketShop';
 import Modal from './components/Modal/Modal';
@@ -16,7 +15,7 @@ import Registration from './components/Registration/Registration';
 
 
 function App() {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
   const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
 
