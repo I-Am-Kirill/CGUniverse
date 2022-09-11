@@ -11,7 +11,7 @@ export default function Scene() {
       <Canvas className="can" camera={{ position: [0.5, 1, 1], fov: 30 }}>
 
         <ambientLight intensity={0.2} />
-        <pointLight position={[10, 0, 10]} />
+        <pointLight position={[10, 30, 10]} />
         <Model />
         <OrbitControls />
         {/* <Environment preset="dawn" background /> */}
