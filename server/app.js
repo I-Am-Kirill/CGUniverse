@@ -8,6 +8,7 @@ const path = require('path');
 const cors = require('cors');
 const auth = require('./routes/api/apiAuth');
 const apiModels = require('./routes/api/apiModels');
+const apiCategory = require('./routes/api/apiCategory');
 
 const app = express();
 const PORT = process.env.PORT ?? 3002;
@@ -40,6 +41,7 @@ app.use(session(sessionConfig));
 app.use('/api', apiModels);
 app.use('/auth', auth);
 app.use('/api/like', apiModels);
+app.use('/api/category', apiCategory);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
