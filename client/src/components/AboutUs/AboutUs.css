@@ -1,0 +1,57 @@
+.AboutUs-body {
+    height: 100%;
+    min-height: 450px;
+    padding-bottom: 25px;
+}
+
+.AboutUs-container {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: -65px;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    min-height: 450px;
+    box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.272);
+    border-radius: 3px;
+
+}
+
+.AboutUs-card {
+    width: 280px;
+    margin-top: 2%;
+}
+
+.AboutUs-card-title {
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: 700;
+    color: #555;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.AboutUs-card-btn {
+    background-color: #28c9ff;
+}
+
+.AboutUs-card-btn:hover {
+    background-color: #1caad9;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+.AboutUs-card-img {
+    width: 274px;
+    height: 155px;
+}
+
+.AboutUs-container-title {
+    height: 117px;
+
+}
