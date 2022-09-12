@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { logout } from '../../redux/actions/authActions';
 import './Header.css';
 
@@ -14,7 +14,7 @@ export default function Header({ setModalActive, setwind }) {
   const navigate = useNavigate();
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor('#252734') : setnavColor('transparent');
+    window.scrollY > 10 ? setnavColor('#181921') : setnavColor('transparent');
     window.scrollY > 10 ? setnavSize('5rem') : setnavSize('5rem');
   };
 
@@ -47,10 +47,10 @@ export default function Header({ setModalActive, setwind }) {
       }}
     >
       <div className="header-container-first">
-        <a className="header-logo-and-name" href="#">
+        <Link className="header-logo-and-name" to="/">
           <img className="header-logo" src="/" alt="logo" />
           CGU30
-        </a>
+        </Link>
       </div>
       <div className="header-container-second">
         <ul className="header-navigation">
@@ -147,9 +147,9 @@ export default function Header({ setModalActive, setwind }) {
             </>
           ) : (
             <>
-              <a>
+              <Link to="/profile">
                 <img className="header-main-icon" alt="ava" src="/" />
-              </a>
+              </Link>
               <a className="header-btn header-right-btn2 heade-btn-logout" href="#">
                 <span className="header-right-btn-text" onClick={logOutHandler}>Выйти</span>
               </a>

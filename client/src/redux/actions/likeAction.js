@@ -7,7 +7,7 @@ export const getLikes = (data) => ({ type: GET_LIKES, payload: data });
 
 export const deleteLike_THUNK = (id) => (dispatch) => {
   fetch(
-    `http://localhost:3002/api/like/like/${id}`,
+    `http://localhost:3002/apilike/like/${id}`,
     {
       method: 'delete',
     },
@@ -18,10 +18,25 @@ export const deleteLike_THUNK = (id) => (dispatch) => {
   });
 };
 
-export const getLike_THUNK = (modelId) => (dispatch) => {
-  fetch(`http://localhost:3002/api/like/like/?modelId=${modelId || 0}`)
+export const createLike_THUNK = (id) => (dispatch) => {
+  fetch(
+    `http://localhost:3002/apilike/like/${id}`,
+    {
+      method: 'POST',
+    },
+  ).then((res) => {
+    if (res.status === 200) {
+      dispatch(createLike(id));
+    }
+  });
+};
+
+export const getLike_THUNK = (userId) => (dispatch) => {
+  console.log(userId);
+  fetch(`http://localhost:3002/apilike/like?userId=${userId || 0}`)
     .then((res) => res.json())
     .then((res) => {
+      console.log('getLike_THUNK', res);
       dispatch(getLikes(res));
     });
 };
