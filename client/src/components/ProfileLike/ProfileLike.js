@@ -23,6 +23,8 @@ export default function ProfileLike() {
     dispatch(getLike_THUNK());
   }, []);
 
+  console.log(like, 'like');
+
   return (
     <div className="profile-general-container">
       <div className="profile-first-container">

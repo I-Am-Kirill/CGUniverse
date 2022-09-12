@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.belongsTo(models.UserModel, { foreignKey: 'model_id' });
+      this.belongsTo(models.User, { foreignKey: 'user_id' });
     }
   }
   Favorites.init({
