@@ -58,7 +58,7 @@ function App() {
                 <p />
               )}
       </Modal>
-
+      <Page />
       <Header setModalActive={setModalActive} setwind={setwind} />
       <Routes>
         <Route path="/" element={<Main setModalActive={setModalActive} setwind={setwind} />} />

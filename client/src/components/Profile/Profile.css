@@ -167,10 +167,14 @@
 
 .profile-two-sides-left-results-grid {
     display: grid;
-    column-gap: 20px;
-    row-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
+    column-gap: 90px;
+    row-gap: 90px;
+    grid-template-columns:  repeat(auto-fit, minmax(100px, 1fr));
+ }
+
+  
+
+
 
 .profile-two-sides-right-table {
     background-color: #ffffff;
