@@ -14,7 +14,7 @@ export default function Header({ setModalActive, setwind }) {
   const navigate = useNavigate();
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor('#252734') : setnavColor('transparent');
+    window.scrollY > 10 ? setnavColor('#181921') : setnavColor('transparent');
     window.scrollY > 10 ? setnavSize('5rem') : setnavSize('5rem');
   };
 
