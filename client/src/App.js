@@ -61,7 +61,7 @@ function App() {
 
       <Header setModalActive={setModalActive} setwind={setwind} />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main setModalActive={setModalActive} setwind={setwind} />} />
         <Route path="/page" element={<Page />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profileLike" element={<ProfileLike />} />
